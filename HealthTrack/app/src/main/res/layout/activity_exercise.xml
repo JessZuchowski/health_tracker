@@ -6,15 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".ExerciseActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
+    <com.synnapps.carouselview.CarouselView
+        android:id="@+id/carouselView"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="150dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:fillColor="#FFFFFFFF"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/moss4" />
+        app:pageColor="#00000000"
+        app:radius="6dp"
+        app:slideInterval="3000"
+        app:strokeColor="#FF777777"
+        app:strokeWidth="1dp"
+        tools:layout_editor_absoluteX="0dp" />
 
     <TextView
         android:id="@+id/text_counter"
