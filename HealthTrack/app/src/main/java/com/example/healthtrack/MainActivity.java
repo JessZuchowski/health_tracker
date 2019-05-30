@@ -2,7 +2,6 @@ package com.example.healthtrack;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -35,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //username
-        text = findViewById(R.id.text_name);
+        text = findViewById(R.id.text_name1);
         edit = findViewById(R.id.edit_name);
 
         SharedPreferences preferences = PreferencesHelper.getFilePreferences(this);

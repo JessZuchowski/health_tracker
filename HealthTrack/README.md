@@ -34,6 +34,10 @@
 1. Backend: Create a <a href="https://github.com/JessZuchowski/backend_healthtracker/tree/master/src"> Spring Backend</a> that includes a replica of the exercise diary model. Create a POST and GET route to allow users to create new exercise entries and to work with the database. 
 2. Android: In addition to new user exercise entries being added to the local database, it should also POST to the server.  
 
+## Day Seven Features:
+1. Strings: Refactor the app so that it can be translated into multiple languages. Use the strings.xml file to remove all hardcoded strings.
+2. Location: Add the ability for users to attach their location to an exercise entry. Display the location within the ListView.
+
 ## References:
 1. <a href="https://www.4tocode.com/create-button-click-increment-counter-in-android/"> Click Counter </a>
 2. <a href="https://github.com/sayyam/carouselview"> Image Carousel </a>

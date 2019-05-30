@@ -76,11 +76,6 @@ public class DiaryActivity extends AppCompatActivity {
         Context context = this.getApplicationContext();
         database = PreferencesHelper.loadDatabase(context);
 
-        database = Room.databaseBuilder(getApplicationContext(), DiaryDatabase.class, "diary-database")
-                .allowMainThreadQueries()
-                .fallbackToDestructiveMigration()
-                .build();
-
         List<Diary> diaries = database.diaryDao().getAll();
 
         //recycler view for display of diary entries
