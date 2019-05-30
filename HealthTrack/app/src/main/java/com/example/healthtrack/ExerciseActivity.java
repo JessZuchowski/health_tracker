@@ -46,6 +46,10 @@ public class ExerciseActivity extends AppCompatActivity {
         String filename = getString(R.string.preferences_file);
         SharedPreferences preferences = getSharedPreferences(filename, Context.MODE_PRIVATE);
 
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("name", name);
+        editor.apply();
+
         //Image Carousel View
         carouselView = (CarouselView) findViewById(R.id.carouselView);
         carouselView.setPageCount(carouselImageList.length);

@@ -39,9 +39,11 @@ public class MainActivity extends AppCompatActivity {
         edit = findViewById(R.id.edit_name);
 
         SharedPreferences preferences = PreferencesHelper.getFilePreferences(this);
-        
 
+        String name = preferences.getString("name", " ");
 
+        text.setText(name);
+        edit.setText(name);
         updateText();
 
         //Image Carousel View
@@ -63,6 +65,10 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences preferences = PreferencesHelper.getFilePreferences(this);
 
         SharedPreferences.Editor editor = preferences.edit();
+
+        name = edit.getText().toString();
+        editor.putString("name", name);
+
         editor.apply();
         updateText();
     }

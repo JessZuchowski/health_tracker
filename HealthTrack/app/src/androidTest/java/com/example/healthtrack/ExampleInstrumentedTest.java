@@ -35,16 +35,11 @@ public class ExampleInstrumentedTest {
 
     @Test
     public void addToClickCounter() {
-        onView(withId(R.id.text_counter))
-                .perform(clearText())
-                .perform(typeText("10"));
 
-        for (int x = 0; x < 11; x++) {
+        for (int x = 0; x < 10; x++) {
             onView(withId(R.id.count_button))
                     .perform(click());
         }
-        onView(allOf(withId(R.id.text_counter), withText("10")))
-                .check(matches(isDisplayed()));
 
         onView(withId(R.id.text_counter))
                 .check(matches(withText("10")));

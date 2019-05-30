@@ -28,6 +28,11 @@
 1. Espresso: Add Espresso tests for all activities (click exercise, image carousel, and diary entries). 
 2. SharedPrefs: Ensure that the user name is displayed throughout the app and modify the homepage to display key stats, like exercise count and visits to the homepage.
 
+![day 5](app/screenshots/day5.png)
+
+## Day Six Features:
+1. Backend: Create a <a href="https://github.com/JessZuchowski/backend_healthtracker/tree/master/src"> Spring Backend</a> that includes a replica of the exercise diary model. Create a POST and GET route to allow users to create new exercise entries and to work with the database. 
+2. Android: In addition to new user exercise entries being added to the local database, it should also POST to the server.  
 
 ## References:
 1. <a href="https://www.4tocode.com/create-button-click-increment-counter-in-android/"> Click Counter </a>
