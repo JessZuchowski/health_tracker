@@ -2,10 +2,13 @@ package com.example.healthtrack;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,6 +16,11 @@ import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageListener;
 
 public class ExerciseActivity extends AppCompatActivity {
+
+    //username
+    private TextView text;
+
+    private String name;
 
     //click counter
     public int clickCounter = 0;
@@ -32,6 +40,12 @@ public class ExerciseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercise);
 
+        //username
+        text = findViewById(R.id.text_name);
+
+        String filename = getString(R.string.preferences_file);
+        SharedPreferences preferences = getSharedPreferences(filename, Context.MODE_PRIVATE);
+
         //Image Carousel View
         carouselView = (CarouselView) findViewById(R.id.carouselView);
         carouselView.setPageCount(carouselImageList.length);
@@ -39,7 +53,7 @@ public class ExerciseActivity extends AppCompatActivity {
 
         //click counter
         text_counter = findViewById(R.id.text_counter);
-        button = findViewById(R.id.button);
+        button = findViewById(R.id.count_button);
         text_counter.setText("0");
 
         //click counter

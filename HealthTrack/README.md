@@ -24,6 +24,11 @@
 2. Write an Adapter class to interact with the database. 
 3. Ensure that displayed data is updated when the user adds an entry.
 
+## Day Five Features:
+1. Espresso: Add Espresso tests for all activities (click exercise, image carousel, and diary entries). 
+2. SharedPrefs: Ensure that the user name is displayed throughout the app and modify the homepage to display key stats, like exercise count and visits to the homepage.
+
+
 ## References:
 1. <a href="https://www.4tocode.com/create-button-click-increment-counter-in-android/"> Click Counter </a>
 2. <a href="https://github.com/sayyam/carouselview"> Image Carousel </a>
