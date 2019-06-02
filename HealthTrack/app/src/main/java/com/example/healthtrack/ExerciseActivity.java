@@ -8,7 +8,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -41,10 +40,14 @@ public class ExerciseActivity extends AppCompatActivity {
         setContentView(R.layout.activity_exercise);
 
         //username
-        text = findViewById(R.id.text_name);
+        text = findViewById(R.id.text_name1);
 
         String filename = getString(R.string.preferences_file);
         SharedPreferences preferences = getSharedPreferences(filename, Context.MODE_PRIVATE);
+
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("name", name);
+        editor.apply();
 
         //Image Carousel View
         carouselView = (CarouselView) findViewById(R.id.carouselView);

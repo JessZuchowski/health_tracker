@@ -32,9 +32,9 @@ public class DiaryLayoutAdapter extends RecyclerView.Adapter<DiaryLayoutAdapter.
         public void setDiary(Diary diary) {
             //set fields diary entries
             this.textTitle.setText(diary.getTitle());
-            this.textQuantity.setText(diary.getQuantity());
+            this.textQuantity.setText("" + diary.getQuantity());
             this.textDescription.setText(diary.getDescription());
-            this.textTimestamp.setText(diary.getTimestamp());
+            this.textTimestamp.setText("" + diary.getTimestamp());
         }
     }
 
